@@ -1,18 +1,18 @@
-import { FC } from 'react';
+import React from 'react';
 
 export type Permission = string;
 
 export type AccessContextType = {
-  isAllowedTo: (permission: Permission) => boolean;
+	isAllowedTo: (permission: Permission) => boolean;
 };
 
 export type AccessProviderProps = {
-  children: React.ReactNode;
-  permissions: Permission[];
+	children: React.ReactNode;
+	permissions: Permission[];
 };
 
 export type AccessBoundaryProps = {
-  to: Permission;
-  isDefaultFallback?: boolean;
-  fallback?: FC;
+	to: Permission;
+	isDefaultFallback?: boolean;
+	fallback?: React.ReactNode;
 };
