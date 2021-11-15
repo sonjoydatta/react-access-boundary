@@ -9,7 +9,7 @@ A simple component to check the user has permission to access wrapper UI compone
 
 1. Installation: It should be installed on your react project `dependencies` by running either of the following:
 
-```
+```jsx
 yarn add react-access-boundary
 # or
 npm i react-access-boundary
@@ -17,46 +17,46 @@ npm i react-access-boundary
 
 2. Usage: First, you need to wrap the application or private layouts with `<AccessProvider>` then you are ready to use this `<AccessBoundary>`
 
-```
+```jsx
 const App = () => {
-    const permissions = ['MY_ACCOUNT', 'ORDER_VIEW', 'ORDER_EDIT', 'ORDER_UPDATE', 'ORDER_DELETE']
+	const permissions = ['MY_ACCOUNT', 'ORDER_VIEW', 'ORDER_EDIT', 'ORDER_UPDATE', 'ORDER_DELETE'];
 
-    return (
-        <AccessProvider permissions={permissions}>
-            <YourApplicationRoutes />
-        </AccessProvider>
-    )
+	return (
+		<AccessProvider permissions={permissions}>
+			<YourApplicationRoutes />
+		</AccessProvider>
+	);
 };
 ```
 
 Protect page
 
-```
+```jsx
 const CustomerOrders = () => {
-    return (
-        <AccessBoundary to="ORDER_VIEW" isDefaultFallback>
-            // Your Customer Order component
-        </AccessBoundary>
-    )
-}
+	return (
+		<AccessBoundary to="ORDER_VIEW" isDefaultFallback>
+			// Your Customer Order component
+		</AccessBoundary>
+	);
+};
 
 export default CustomerOrders;
 ```
 
 Protect UI component
 
-```
+```jsx
 <AccessBoundary to="ORDER_DELETE">
-    <button class="ActionButton">Delete Order</button>
+	<button class="ActionButton">Delete Order</button>
 </AccessBoundary>
 ```
 
 Conditional render using hook
 
-```
+```jsx
 const isAllowedTo = useAccess();
 
-<button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order' }</button>
+<button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order'}</button>;
 ```
 
 ## Can I contribute?
