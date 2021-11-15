@@ -56,7 +56,7 @@ Conditional render using hook
 ```jsx
 const isAllowedTo = useAccess();
 
-<button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order'}</button>;
+<button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order'}</button>
 ```
 
 ## Can I contribute?
