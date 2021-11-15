@@ -9,7 +9,7 @@ A simple component to check the user has permission to access wrapper UI compone
 
 1. Installation: It should be installed on your react project `dependencies` by running either of the following:
 
-``` 
+```
 yarn add react-access-boundary
 # or
 npm i react-access-boundary
