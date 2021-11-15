@@ -1,6 +1,6 @@
 # react-access-boundary
 
-A simple component to check the user has permission to access wrapper UI components or not.
+A simple component to check the user has permission to access wrapped UI components or not.
 
 [![version][version-badge]][package]
 [![MIT License][license-badge]][license]
@@ -19,13 +19,13 @@ npm i react-access-boundary
 
 ```jsx
 const App = () => {
-  const permissions = ['MY_ACCOUNT', 'ORDER_VIEW', 'ORDER_EDIT', 'ORDER_UPDATE', 'ORDER_DELETE'];
+	const permissions = ['MY_ACCOUNT', 'ORDER_VIEW', 'ORDER_EDIT', 'ORDER_UPDATE', 'ORDER_DELETE'];
 
-  return (
-    <AccessProvider permissions={permissions}>
-      <YourApplicationRoutes />
-    </AccessProvider>
-  );
+	return (
+		<AccessProvider permissions={permissions}>
+			<YourApplicationRoutes />
+		</AccessProvider>
+	);
 };
 ```
 
@@ -33,11 +33,11 @@ Protect page
 
 ```jsx
 const CustomerOrders = () => {
-  return (
-    <AccessBoundary to="ORDER_VIEW" isDefaultFallback>
-      // Your Customer Order component
-    </AccessBoundary>
-  );
+	return (
+		<AccessBoundary to="ORDER_VIEW" isDefaultFallback>
+			// Your Customer Order component
+		</AccessBoundary>
+	);
 };
 
 export default CustomerOrders;
@@ -47,7 +47,7 @@ Protect UI component
 
 ```jsx
 <AccessBoundary to="ORDER_DELETE">
-  <button class="ActionButton">Delete Order</button>
+	<button class="ActionButton">Delete Order</button>
 </AccessBoundary>
 ```
 
@@ -56,7 +56,7 @@ Conditional render using hook
 ```jsx
 const isAllowedTo = useAccess();
 
-<button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order'}</button>
+<button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order'}</button>;
 ```
 
 ## Can I contribute?
