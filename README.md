@@ -15,7 +15,7 @@ yarn add react-access-boundary
 npm i react-access-boundary
 ```
 
-2. Usage: First, you need to wrap the application or private layouts with `<AccessProvider>` then you are ready to use this `<AccessBoundary>`,
+2. Usage: First, you need to wrap the application or private layouts with `<AccessProvider>` then you are ready to use this `<AccessBoundary>`
 
 ```jsx
 const App = () => {
