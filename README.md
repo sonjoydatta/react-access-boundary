@@ -51,10 +51,10 @@ Protect UI component
 </AccessBoundary>
 ```
 
-Conditional render using hook
+Conditional render with useContext
 
 ```jsx
-const isAllowedTo = useAccess();
+const { isAllowedTo } = useAccessContext();
 
 <button class="ActionButton">{isAllowedTo('ORDER_UPDATE') ? 'Update Order' : 'Preview Order'}</button>;
 ```

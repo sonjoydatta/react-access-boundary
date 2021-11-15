@@ -19,7 +19,7 @@ const AccessContext = React.createContext<AccessContextType>(defaultValue);
 export const AccessProvider: React.FC<React.PropsWithChildren<AccessProviderProps>> = ({ permissions, children }) => {
 	const isAllowedTo = (permission: Permission) => permissions.includes(permission);
 
-	return <AccessContext.Provider value={{ isAllowedTo: isAllowedTo }}>{children}</AccessContext.Provider>;
+	return <AccessContext.Provider value={{ isAllowedTo }}>{children}</AccessContext.Provider>;
 };
 
 export const useAccessContext = () => React.useContext(AccessContext);

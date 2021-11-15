@@ -2,19 +2,19 @@ import React from 'react';
 
 export const Fallback403: React.CSSProperties = {
 	display: 'block',
-	padding: '3rem 2rem',
+	padding: '48px 32px',
 };
 
 export const Fallback403__Image: React.CSSProperties = {
-	width: '15.625rem',
-	height: '18.438rem',
-	margin: '0 auto 1.5rem auto',
+	width: '250px',
+	height: '295px',
+	margin: '0 auto 24px auto',
 	textAlignLast: 'center',
 };
 
 export const Fallback403__Title: React.CSSProperties = {
 	color: 'rgba(0, 0, 0, 0.85)',
-	fontSize: '1.5rem',
+	fontSize: '24px',
 	lineHeight: '1.8',
 	textAlignLast: 'center',
 	margin: '0',
@@ -22,7 +22,7 @@ export const Fallback403__Title: React.CSSProperties = {
 
 export const Fallback403__Subtitle: React.CSSProperties = {
 	color: 'rgba(0, 0, 0, 0.45)',
-	fontSize: '0.875rem',
+	fontSize: '14px',
 	lineHeight: '1.6',
 	textAlignLast: 'center',
 };
